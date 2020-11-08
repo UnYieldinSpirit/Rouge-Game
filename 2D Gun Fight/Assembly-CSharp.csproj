@@ -60,7 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Character2DController.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\FieldOfVision.cs" />
+    <Compile Include="Assets\Scripts\GameHandler.cs" />
+    <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/UnYieldinSpirit/Documents/Towson Work/Fall 2020/COSC 412 Individual/412-Project/2D Gun Fight/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
