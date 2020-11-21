@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraFollow : MonoBehaviour
 {
     private Func<Vector3> GetCameraFollowPositionFunc;
@@ -24,7 +25,7 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 cameraMoveDir = (cameraFollowPosition - transform.position).normalized;
         float distance = Vector3.Distance(cameraFollowPosition, transform.position);
-        float cameraMoveSpeed = 1f;
+        float cameraMoveSpeed = 5f;
 
         if (distance > 0)
         {
