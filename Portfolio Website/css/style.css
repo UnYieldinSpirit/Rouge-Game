@@ -1,0 +1,151 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+a{
+   position: relative;
+   transform: translate(-50%, -50%);
+   width: 200px;
+   height: 60px;
+   text-align: center;
+   line-height: 60px;
+   color: #fff;
+   font-size: 26px;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-family: sans-serif;
+   box-sizing: border-box;
+   background: linear-gradient(90deg, #000000, #03a9f4, #f441a4, #ffeb3b, #000000 #03a9f4);
+   background-size: 1000%;
+   border-radius: 45px;
+}
+a:hover
+{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+    
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 100%;
+    }
+}
+a:before
+{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #FFEB3B, #03a9f4, #f441a5);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+a:hover:before
+{
+
+    filter: blur(20px);
+    opacity: 1;
+    animation:animate 4s linear infinite;
+}
+
+h1
+{
+    color:#ff69b4;
+    
+}
+
+h2
+{
+    color:#fe4f00;
+}
+
+p
+{
+    color: pink;
+}
+
+body
+{
+    background: rgb(58, 58, 58);
+    font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+}
+
+.navigation
+{
+list-style: none;
+font-family: 'Roboto Thin';
+color: white;
+margin: 50px 0 0 0;
+text-align: right;
+}
+
+header
+{
+    background: black;
+    color: gray;
+    padding: 40px 20px 10px 50px;
+}
+
+.logo 
+{
+    background-image: url(/images/UnYieldinSpirit_Logo.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    height:100px;
+    width:100px;
+    text-indent:-9999999999px;
+    position:relative;
+    top:-15px;
+    float: right;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+li
+{
+    display: inline-block;
+    margin: 50px 0 0 0;
+    padding-right: 6%;
+}
+
+li:first-child
+{
+float: left;
+}
+
+section
+{
+    background: pink;
+    padding: 20px;
+}
+
+footer
+{
+    background: white;
+    padding: 10px 20px;
+}
+
+.floatleft
+{
+    float:left;
+}
+
+.floatright
+{
+    float:right;
+}
