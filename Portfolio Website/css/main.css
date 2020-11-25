@@ -1,0 +1,154 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+h1
+{
+    color:#ff69b4;
+    position:absolute;
+    
+    
+}
+
+h2
+{
+    color:#fe4f00;
+}
+
+p
+{
+    color: pink;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+body
+{
+    background: #19011a;
+    background-image: url('/images/Background.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+
+}
+
+.topnav
+{
+    list-style: none;
+    margin: 50px 0 0 0;
+    text-align: right;
+}
+
+.navigation
+{
+list-style: none;
+font-family: 'Roboto Thin';
+color: white;
+margin: 50px 0 0 0;
+text-align: right;
+}
+
+.home
+{
+    margin-top: 220px;
+}
+
+header .labels a
+{
+    position:relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ff69b4;
+    text-transform:uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+header .labels a:hover
+{
+    color:#912259;
+    background: #ff69b4;
+    box-shadow: 0 0 10px #ff69b4, 0 0 40px #ff69b4, 0 0 80px #ff69b4;
+}
+
+header .logo a
+{
+    background-image: url(/images/Logo.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    height:100px;
+    width:100px;
+    text-indent:-9999999999px;
+    position:relative;
+    top:-15px;
+    float:left;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+li
+{
+    display: inline-block;
+    margin: 10px 0 0 0;
+    font-size: 36px;
+    padding-right: 6%;
+}
+
+li:first-child
+{
+    float: left;
+}
+
+section
+{
+    text-align: center;
+    padding: 8%;
+}
+
+section .thebutton
+{
+    height: 40px;
+    width: 200px;
+    letter-spacing: 2px;
+    font-size: 32px;
+    color: #be7a9c;
+    background-color: #000000;
+    display: inline-block;
+    padding: 6px;
+    margin: 0 35px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+section header
+{
+    margin-top: 0px;
+    font-size: 62px;
+    margin-bottom: 20px;
+}
+
+.homepage
+{
+    margin-top: 220px;
+    color: rgb(243, 185, 255);
+}
+
+footer
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 1pt;
+    color: white;
+}
