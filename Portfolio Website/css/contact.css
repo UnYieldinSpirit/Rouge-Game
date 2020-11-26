@@ -99,6 +99,13 @@ body
     animation: glow 8s linear infinite;
 }
 
+.contactHeader
+{
+    font-size: 32px;
+    text-align: center;
+    line-height: 50px;
+}
+
 .container
 {
     display: flex;
@@ -107,6 +114,45 @@ body
     align-items: center;
     text-align: center;
     min-height: 10vh;
+}
+
+.features
+{
+    padding: 8%;
+    clear: both;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features figure 
+{
+    display: inline-block;
+    width: 129px;
+    margin: 150px;
+    padding: 25px;
+    margin: 2px;
+    position: relative;
+    top: -200px;
+}
+
+.features img
+{
+    width: 129px;
+    height: 129px;
+}
+
+.figures figure img
+{
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    size: -200000%;
+}
+
+.figures img:hover
+{
+    filter: brightness(0.7);
 }
 
 @keyframes glow
@@ -174,8 +220,8 @@ body
 
 .par
 {
-    margin-top: 400px;
-    height: 800px;
+    margin-top: -275px;
+    height: 200px;
 }
 
 .topnav
@@ -188,11 +234,6 @@ body
 header
 {
     color: #faf2f3;
-}
-
-.lightpink
-{
-    color: lightpink;
 }
 
 header .neonbutton a
