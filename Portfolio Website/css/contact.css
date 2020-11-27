@@ -128,12 +128,12 @@ body
 .features figure 
 {
     display: inline-block;
-    width: 129px;
+    width: 225px;
     margin: 150px;
     padding: 25px;
     margin: 2px;
     position: relative;
-    top: -200px;
+    top: -350px;
 }
 
 .features img

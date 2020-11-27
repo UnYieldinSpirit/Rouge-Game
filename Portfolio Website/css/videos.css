@@ -99,13 +99,6 @@ body
     animation: glow 8s linear infinite;
 }
 
-.contactHeader
-{
-    font-size: 32px;
-    text-align: center;
-    line-height: 50px;
-}
-
 .container
 {
     display: flex;
@@ -223,8 +216,8 @@ figure img:hover
 
 .videos
 {
-    margin-top: 20px;
-    font-size: 36px;
+    margin-top: 10px;
+    font-size: 50px;
     color: lightpink;
 }
 
