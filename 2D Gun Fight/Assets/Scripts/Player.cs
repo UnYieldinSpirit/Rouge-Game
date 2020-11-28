@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth = 0;
     public HealthBar healthBar;
+    public GameController gameController;
 
     //variables for movement based things
     public float moveSpeed = 3;
@@ -162,6 +163,7 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        gameController.healthCheck(currentHealth);
     }
 
     private void UpdateAnimations()
