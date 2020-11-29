@@ -12,4 +12,9 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene(2); //ends the game and loads the death screen
         }
     }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

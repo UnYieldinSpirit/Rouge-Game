@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rigbod;
-    private BoxCollider2D boxCollider;
+    public PolygonCollider2D polyCollider;
     
-    public int maxHealth = 100;
+    public int maxHealth = 200;
     public int currentHealth = 0;
     public HealthBar healthBar;
     public GameController gameController;
@@ -15,14 +15,16 @@ public class Player : MonoBehaviour
     //variables for movement based things
     public float moveSpeed = 3;
     public float jumpForce = 10f;
-    public bool canJump;
+    public bool canJump, canFlip;
     public int amountOfJumps = 2;
     private int amountOfJumpsLeft;
 
     //variables for ground checking for jumping mechanics
     public Transform groundCheck;
     public LayerMask whatIsGround;
+    public LayerMask whatIsHazard;
     public bool isGrounded;
+    public bool isInAcid;
     public float groundCheckRadius;
 
     //variables for the direction checks of the player
@@ -36,7 +38,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rigbod = transform.GetComponent<Rigidbody2D>();
-        boxCollider = transform.GetComponent<BoxCollider2D>();
+        polyCollider = GetComponent<PolygonCollider2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -45,14 +47,15 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         amountOfJumpsLeft = amountOfJumps;
+        canFlip = true;
     }
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            TakeDamage(20);
+           gameController.restartLevel(); 
         }
 
         HandleMovement();
@@ -65,6 +68,15 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         CheckSurroundings();
+        AcidCheck(isInAcid);
+    }
+
+    private void AcidCheck(bool inAcid)
+    {
+        if(isInAcid)
+        {
+            TakeDamage(1);
+        }
     }
 
     private void CheckIfCanJump() //to prevent infinite jumping
@@ -97,6 +109,7 @@ public class Player : MonoBehaviour
     private void CheckSurroundings()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        isInAcid = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsHazard);
     }
 
     private void CheckMovementDirection() //Checks the direction of the movement as well as which way the character sprite is facing
@@ -110,7 +123,7 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-        if(rigbod.velocity.x !=0)
+        if(Mathf.Abs(rigbod.velocity.x) >= 0.01f)
         {
             isRunning = true;
         }
@@ -120,10 +133,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void DisableFlip()
+    {
+        canFlip = false;
+    }
+
+    public void EnableFlip()
+    {
+        canFlip = true;
+    }
+
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        if(canFlip)
+        {
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+        }   
     }
 
     private void HandleMovement()
@@ -159,7 +185,7 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
@@ -172,4 +198,5 @@ public class Player : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rigbod.velocity.y);
     }
+
 }
