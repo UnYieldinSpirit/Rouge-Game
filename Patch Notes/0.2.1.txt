@@ -1,0 +1,23 @@
+Version 0.2.1
+
++Added Jump Animation for Player
++Added Run Animation for Player
++Added Idle Animation for Player
++Added Secondary piece of the stage
++Added Boss Stage Area
++Added Health Bar
++Added Heart Sprite for Health Bar
++Added Health Mechanic
+
++Updated UI Elements
++Updated Player Sprites
++Updated Terrain Sprites
++Updated Jump Mechanics
++Updated Player Movement Mechanics
++Updated Player Sensors V.2
++Updated Code Readability
++Updated Game Lighting
++Updated Jump Method
+
+-Removed CodeMonkey
+-Removed Utils.Clas

@@ -1,0 +1,20 @@
+Version 0.4.0 (Originally Version 1.0.0)
+
++Added Enemy
++Added Random Enemy Spawn
++Added Enemy Hit Detection
++Added Player Attack Damage
++Added Score
++Added High Score
++Added Score Counter
++Added 50 Score for Killing an Enemy
++Added Containment Unit 001
++Added Containment Unit 002
++Added Containment Unit 003
++Added Containment Unit 004
++Added Containment Unit 005
++Added Containment Unit 666
++Added Containment Unit 007
++Added Acid Pit
++Added Hazards Damage to Player
++Added Player Attack Animation

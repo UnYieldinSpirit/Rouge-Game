@@ -1,0 +1,4 @@
+Version 0.1.1
+
++Camera Follows the Player
++Basic Left and Right Player Movement has been added

@@ -1,0 +1,21 @@
+Version 0.3.0
+
++Added Main Menu
++Added Play Button and Play Functions
++Added Options Button
++Added Quit Button and Quit Functions
++Added Death Menu
++Added Death Restart Button and Restart Function
++Added Quit Button and Quit Functions
++Death Leads to Death Menu
++Created a Game Controller to handle the basic game functions
++Created a Death Menu Script
++Created a Main Menu Script
++Finished Containment Unit 1 Sprite
++Finished Containment Unit 2 Sprite
++Finished Containment Unit 3 Sprite
++Finished Containment Unit 4 Sprite
++Finished Containment Unit 5 Sprite
++Finished Containment Unit 666 Sprite
++Finished Containment Unit 7 Sprite
++Improved Code Readability
